@@ -25,7 +25,10 @@ class MainTest {
 		SingleLoraPalmer loraPalmer = context.getBean(SingleLoraPalmer.class);
 		PrototypeSarahConnor sarahConnor = context.getBean(PrototypeSarahConnor.class);
 		assertEquals(loraPalmer.saySomething(), "I know who kill me");
-		assertEquals(sarahConnor.saySomething(), "No fate");
+		assertEquals(sarahConnor.saySomething(), "No fate in year 2020");
+		context.destroy();
+		assertEquals(loraPalmer.getStatus(), "Died");
+		assertEquals(sarahConnor.getStatus(), "Alive");
 	}
 
 }

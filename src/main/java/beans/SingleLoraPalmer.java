@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 public class SingleLoraPalmer implements Speaker, DisposableBean {
+
+	private String status = "Alive";
 	@Override
 	public String saySomething() {
 		return "I know who kill me";
@@ -14,6 +16,6 @@ public class SingleLoraPalmer implements Speaker, DisposableBean {
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("Lora die");
+		status = "Died";
 	}
 }
