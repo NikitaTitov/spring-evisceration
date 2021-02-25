@@ -1,4 +1,4 @@
-package beans;
+package app.beans;
 
 public interface Speaker {
 

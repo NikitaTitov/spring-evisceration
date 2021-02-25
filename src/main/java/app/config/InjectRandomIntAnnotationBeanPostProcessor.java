@@ -1,15 +1,16 @@
-package beans;
+package app.config;
 
+import app.utils.InjectRandomInt;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
-import utils.InjectRandomInt;
 
 import java.util.stream.Stream;
 
 @Component
 public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProcessor {
+
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		Stream

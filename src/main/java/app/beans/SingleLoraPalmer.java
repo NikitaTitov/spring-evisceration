@@ -1,20 +1,18 @@
-package beans;
+package app.beans;
 
 import lombok.Data;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.stereotype.Component;
-import utils.InjectRandomInt;
 
 @Data
-@Component()
-public class PrototypeSarahConnor implements Speaker, DisposableBean {
+@Component
+public class SingleLoraPalmer implements Speaker, DisposableBean {
 
 	private String status = "Alive";
-	@InjectRandomInt(year = 2020)
-	private int year;
+
 	@Override
 	public String saySomething() {
-		return "No fate in year " + year;
+		return "I know who kill me";
 	}
 
 	@Override
